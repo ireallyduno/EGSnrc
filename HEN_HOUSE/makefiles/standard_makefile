@@ -83,7 +83,6 @@ failed_message = "______Operation failed______"
 # something like
 #   g77 -O3 -o /usr/people/iwan/egsnrc/bin/Linux/dosrznrc dosrznrc_Linux.F
 #
-# ESTAR_DIR = $(HEN_HOUSE)estar$(DSEP)
 $(EXECUTABLE): $(FORTRAN_FILE).$(FEXT) $(EGS_EXTRA_OBJECTS) $(EXE_DIR)
 	@echo $(empty)
 	@echo $(empty)
