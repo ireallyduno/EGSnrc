@@ -4539,7 +4539,7 @@ $REAL rho($MXREG);
 
 integer     code;
 character   encoding(63);
-encoding =  '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+encoding =  $ENCODING;
 
 REPLACE {$IRWP(#,#,#)} WITH {(1 + {P1} + ({P2}-1)*iimax + ({P3}-1)*iimax*jjmax)}
 

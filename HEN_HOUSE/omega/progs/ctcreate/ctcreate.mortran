@@ -2040,9 +2040,8 @@ REAL    xbnd($IMAX+1),             "voxel x boundaries"
         rho($MXREG),               "linear array of densities"
         estepe($MXMED);            "linear array of estepe values"
 
-integer     code;
 character   encoding*63;
-encoding =  '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+encoding =  $ENCODING;
 
 REPLACE {$IR(#,#,#)} WITH {(1 + {P1} + ({P2}-1)*iimax + ({P3}-1)*iimax*jjmax)}
 
