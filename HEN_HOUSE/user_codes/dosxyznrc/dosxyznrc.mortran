@@ -1353,7 +1353,7 @@ REAL z_score_tmp; "dummy variable passed to IAEA phsp file opening macro"
 external combine_results;
 
 character medChar($IMAX);
-character encoding*63;
+character encoding*62;
 encoding = $ENCODING;
 
 #ifdef HAVE_C_COMPILER;
@@ -4537,7 +4537,7 @@ REAL    xbnd($IMAX+1),             "voxel x boundaries"
         estepe($MXMED);            "linear array of estepe values"
 $REAL rho($MXREG);
 
-character  encoding(63);
+character  encoding(62);
 encoding = $ENCODING;
 
 REPLACE {$IRWP(#,#,#)} WITH {(1 + {P1} + ({P2}-1)*iimax + ({P3}-1)*iimax*jjmax)}

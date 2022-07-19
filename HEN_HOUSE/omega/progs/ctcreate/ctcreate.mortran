@@ -2040,7 +2040,7 @@ REAL    xbnd($IMAX+1),             "voxel x boundaries"
         rho($MXREG),               "linear array of densities"
         estepe($MXMED);            "linear array of estepe values"
 
-character  encoding*63;
+character  encoding*62;
 encoding = $ENCODING;
 
 REPLACE {$IR(#,#,#)} WITH {(1 + {P1} + ({P2}-1)*iimax + ({P3}-1)*iimax*jjmax)}
