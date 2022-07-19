@@ -2040,8 +2040,8 @@ REAL    xbnd($IMAX+1),             "voxel x boundaries"
         rho($MXREG),               "linear array of densities"
         estepe($MXMED);            "linear array of estepe values"
 
-character   encoding*63;
-encoding =  $ENCODING;
+character  encoding*63;
+encoding = $ENCODING;
 
 REPLACE {$IR(#,#,#)} WITH {(1 + {P1} + ({P2}-1)*iimax + ({P3}-1)*iimax*jjmax)}
 
@@ -2076,10 +2076,8 @@ WRITE(15,*) (ybnd(jj),jj=1,jjmax+1);
 WRITE(15,*) (zbnd(kk),kk=1,kkmax+1);
 DO kk=1,kkmax[
     DO jj=1,jjmax[
-        DO ii=1,iimax[
-            code = med($IR(ii,jj,kk)) + 1;
-            WRITE(15,1399) (encoding(code:code), advance='no');
-        ]
+        WRITE(15,1399)
+        (encoding(med($IR(ii,jj,kk)+1:med($IR(ii,jj,kk)+1),ii=1,iimax);
     ]
     WRITE(15,*);
 ]
