@@ -2077,7 +2077,7 @@ WRITE(15,*) (zbnd(kk),kk=1,kkmax+1);
 DO kk=1,kkmax[
     DO jj=1,jjmax[
         WRITE(15,1399)
-        (encoding(med($IR(ii,jj,kk)+1:med($IR(ii,jj,kk)+1),ii=1,iimax);
+        (encoding(med($IR(ii,jj,kk))+1:med($IR(ii,jj,kk))+1),ii=1,iimax);
     ]
     WRITE(15,*);
 ]

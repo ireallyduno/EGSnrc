@@ -4556,7 +4556,7 @@ WRITE(iunit,*) (zbnd(kk),kk=1,kkmax+1);
 DO kk=1,kkmax[
     DO jj=1,jjmax[
         WRITE(iunit,1399)
-        (encoding(med($IR(ii,jj,kk)+1:med($IR(ii,jj,kk)+1),ii=1,iimax);
+        (encoding(med($IRWP(ii,jj,kk))+1:med($IRWP(ii,jj,kk))+1),ii=1,iimax);
     ]
     WRITE(iunit,*);
 ]
