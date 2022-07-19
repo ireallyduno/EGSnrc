@@ -1354,6 +1354,7 @@ external combine_results;
 
 character medChar($IMAX);
 character encoding*63;
+encoding = $ENCODING;
 
 #ifdef HAVE_C_COMPILER;
 $REAL   part_dose, part2_dose, current_result, current_uncertainty;
@@ -1519,7 +1520,6 @@ IF(NMED = 0)[ "Input data from CT data file as processed by the code ctcreate"
       ' z range : ',F12.5,' - ',F12.5,' cm');
 
     "input the media numbers"
-    encoding = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
     DO k=1,KMAX[
        DO j=1,JMAX[
           "Read in the characters that correspond to medium numbers"
@@ -4537,9 +4537,9 @@ REAL    xbnd($IMAX+1),             "voxel x boundaries"
         estepe($MXMED);            "linear array of estepe values"
 $REAL rho($MXREG);
 
-integer     code;
-character   encoding(63);
-encoding =  $ENCODING;
+integer    code;
+character  encoding(63);
+encoding = $ENCODING;
 
 REPLACE {$IRWP(#,#,#)} WITH {(1 + {P1} + ({P2}-1)*iimax + ({P3}-1)*iimax*jjmax)}
 
