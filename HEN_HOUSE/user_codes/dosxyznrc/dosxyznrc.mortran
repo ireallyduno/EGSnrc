@@ -1354,7 +1354,6 @@ external combine_results;
 
 character medChar($IMAX);
 character encoding*62;
-encoding = $ENCODING;
 
 #ifdef HAVE_C_COMPILER;
 $REAL   part_dose, part2_dose, current_result, current_uncertainty;
@@ -1373,6 +1372,8 @@ $DECLARE_TIMING_VARIABLES;
 "cput1 is cputime at start of simulations"
 "cput2 is cputime when asked for so elapsed cpu is cput2-cput0 or -cput1"
 
+"define the ascii encoding string for media in egsphant file"
+encoding = $ENCODING;
 
 call egs_init; "initialize EGSnrc system"
 
